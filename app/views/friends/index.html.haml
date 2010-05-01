@@ -1,0 +1,4 @@
+%ul
+  - @friends['data'].each do |friend|
+    %li
+      %img{:src => "http://graph.facebook.com/#{friend['id']}/picture?type=large"}

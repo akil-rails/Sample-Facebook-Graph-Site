@@ -1,0 +1,23 @@
+== A sample Facebook Rails 3 App
+
+Using Oauth2 and the new Facebook Graph API
+
+== Getting started
+
+1. Get a Facebook App Api key/secret
+  a. http://www.facebook.com/developers/?ref=sb add this app, if you haven't already
+  b. Set up a new application http://www.facebook.com/developers/createapp.php
+2. Setup your environment
+  a. Install gem bundler http://gembundler.com/
+  b. bundle install
+  c. Put your api key/secret (from step 1) in environment.rb
+3. bundle exec rails server
+
+== Some related reading
+
+The old api: http://wiki.developers.facebook.com/index.php/API
+Nice Facebook Connect Tutorial: http://madebymany.co.uk/tutorial-for-restful_authentication-on-rails-with-facebook-connect-in-15-minutes-00523
+
+The new graph api: http://developers.facebook.com/docs/api
+Oauth2 gem: http://intridea.com/2010/4/22/oauth2-gem-just-in-time-for-facebook-graph
+Oauth2... Now up to 2 clients! http://wiki.oauth.net/OAuth-2.0

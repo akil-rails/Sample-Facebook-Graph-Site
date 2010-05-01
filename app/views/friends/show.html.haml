@@ -1,0 +1,20 @@
+.mod
+  %h1= @friend['name']
+  - if @friend['website']
+    %h2= link_to @friend['website'], @friend['website']
+  - if @friend['birthday']
+    %h3
+      Totally borninated
+      = time_ago_in_words(Time.parse(@friend['birthday']))
+      ago.
+.mod
+  %img{:src => "http://graph.facebook.com/#{@friend['id']}/picture?type=large"}
+-  @photos['data'].each do |photo|
+  .mod
+    %img{:src => photo['source'], :width => 200}
+- if @albums['data'].any?
+  .mod
+    %p Albums!
+    %ul
+      - @albums['data'].each do |album|
+        %li= link_to album['name'], album['link']

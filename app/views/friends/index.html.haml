@@ -1,4 +1,4 @@
-%ul
-  - @friends['data'].each do |friend|
-    %li
-      %img{:src => "http://graph.facebook.com/#{friend['id']}/picture?type=large"}
+- @friends['data'].sort_by { rand }.each do |friend|
+  .mod
+    %a{:href => friend_path(friend['id'])}
+      %img{:src => graph_picture_url(friend['id'])}

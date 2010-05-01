@@ -1,4 +1,4 @@
 - @friends['data'].sort_by { rand }.each do |friend|
   .mod
     %a{:href => friend_path(friend['id'])}
-      %img{:src => graph_picture_url(friend['id'])}
+      %img{:src => graph_picture_url(friend['id']), :title => friend['name']}

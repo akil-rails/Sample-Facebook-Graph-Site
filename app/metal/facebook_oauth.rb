@@ -7,13 +7,12 @@ class FacebookOauth < Sinatra::Base
   get '/auth/facebook' do
     redirect facebook_client.web_server.authorize_url(
       :redirect_uri => facebook_redirect_uri,
-      :scope => 'email,offline_access'
+      :scope => 'email,offline_access,friends_photos,user_photos,read_stream'
     )
   end
 
   get '/auth/facebook/callback' do
     access_token = facebook_client.web_server.get_access_token(params[:code], :redirect_uri => facebook_redirect_uri)
-    user = JSON.parse(access_token.get('/me'))
 
     session = env['rack.session']
     session[:facebook_access_token] = params[:code]

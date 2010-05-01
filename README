@@ -4,13 +4,14 @@ Using Oauth2 and the new Facebook Graph API
 
 == Getting started
 
-1. Get a Facebook App Api key/secret
+1. Get a Facebook App Api id/secret
   a. http://www.facebook.com/developers/?ref=sb add this app, if you haven't already
   b. Set up a new application http://www.facebook.com/developers/createapp.php
+  c. Set your application's connect url (perhaps to http://localhost:3000/)
 2. Setup your environment
   a. Install gem bundler http://gembundler.com/
   b. bundle install
-  c. Put your api key/secret (from step 1) in environment.rb
+  c. Put your api id/secret (from step 1) in facebook_keys.yml
 3. bundle exec rails server
 
 == Some related reading

@@ -1,6 +1,6 @@
 module FacebookClient
   def facebook_client
-    @facebook_client = OAuth2::Client.new(FACEBOOK_CONF[:api_key], FACEBOOK_CONF[:api_secret], :site => 'https://graph.facebook.com')
+    @facebook_client = OAuth2::Client.new(FACEBOOK_CONF[:application_id], FACEBOOK_CONF[:api_secret], :site => 'https://graph.facebook.com')
     # Makes a request relative to the specified site root.
     def @facebook_client.request(verb, url, params = {}, headers = {})
       puts "#{verb}: #{url} with \n#{params.inspect}"
